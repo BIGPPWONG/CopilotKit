@@ -13,12 +13,12 @@ import { Observable } from "rxjs";
 import { RuntimeEvent, RuntimeEventSubject } from "../../service-adapters/events";
 import telemetry from "../telemetry-client";
 import { RemoteLangGraphEventSource } from "../../agents/langgraph/event-source";
-import { Action } from "@copilotkit/shared";
+import { Action } from "@bigppwong/copilotkit-shared";
 import { execute } from "./remote-lg-action";
-import { CopilotKitError, CopilotKitLowLevelError } from "@copilotkit/shared";
+import { CopilotKitError, CopilotKitLowLevelError } from "@bigppwong/copilotkit-shared";
 import { writeJsonLineResponseToEventStream } from "../streaming";
-import { CopilotKitApiDiscoveryError, ResolvedCopilotKitError } from "@copilotkit/shared";
-import { parseJson, tryMap } from "@copilotkit/shared";
+import { CopilotKitApiDiscoveryError, ResolvedCopilotKitError } from "@bigppwong/copilotkit-shared";
+import { parseJson, tryMap } from "@bigppwong/copilotkit-shared";
 import { ActionInput } from "../../graphql/inputs/action.input";
 
 export function constructLGCRemoteAction({

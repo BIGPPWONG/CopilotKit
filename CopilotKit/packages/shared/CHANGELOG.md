@@ -1,5 +1,17 @@
 # @copilotkit/shared
 
+## 2.0.0-next.2
+
+### Major Changes
+
+- fork copilotkit
+
+## 2.0.0-next.1
+
+### Major Changes
+
+- fork Copilotkit
+
 ## 1.8.14-next.0
 
 ## 1.8.13

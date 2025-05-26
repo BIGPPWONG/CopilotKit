@@ -5,7 +5,7 @@ import {
   StreamMode,
 } from "@langchain/langgraph-sdk";
 import { createHash } from "node:crypto";
-import { isValidUUID, randomUUID } from "@copilotkit/shared";
+import { isValidUUID, randomUUID } from "@bigppwong/copilotkit-shared";
 import { parse as parsePartialJson } from "partial-json";
 import { Logger } from "pino";
 import { ActionInput } from "../../graphql/inputs/action.input";
@@ -17,7 +17,7 @@ import { CustomEventNames, LangGraphEventTypes } from "../../agents/langgraph/ev
 import telemetry from "../telemetry-client";
 import { MetaEventInput } from "../../graphql/inputs/meta-event.input";
 import { MetaEventName } from "../../graphql/types/meta-events.type";
-import { parseJson, CopilotKitMisuseError } from "@copilotkit/shared";
+import { parseJson, CopilotKitMisuseError } from "@bigppwong/copilotkit-shared";
 import { RemoveMessage } from "@langchain/core/messages";
 
 type State = Record<string, any>;

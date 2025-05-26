@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { Severity, CopilotKitError } from "@copilotkit/shared";
+import { Severity, CopilotKitError } from "@bigppwong/copilotkit-shared";
 import { StatusChecker } from "../../lib/status-checker";
 import { renderCopilotKitUsage, UsageBanner } from "../usage-banner";
 import { useErrorToast } from "./error-utils";
-import { COPILOT_CLOUD_ERROR_NAMES } from "@copilotkit/shared";
+import { COPILOT_CLOUD_ERROR_NAMES } from "@bigppwong/copilotkit-shared";
 
 const statusChecker = new StatusChecker();
 

@@ -5,7 +5,7 @@ import {
   CoAgentStateRenderHandler,
   randomId,
   parseJson,
-} from "@copilotkit/shared";
+} from "@bigppwong/copilotkit-shared";
 import {
   Message,
   TextMessage,
@@ -30,7 +30,7 @@ import {
   LangGraphInterruptEvent,
   MetaEventInput,
   AgentStateInput,
-} from "@copilotkit/runtime-client-gql";
+} from "@bigppwong/copilotkit-runtime-client-gql";
 
 import { CopilotApiConfig } from "../context";
 import { FrontendAction, processActionsForRuntimeRequest } from "../types/frontend-action";

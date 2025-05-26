@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import { WindowProps } from "./props";
 import { useChatContext } from "./ChatContext";
-import { useCopilotContext } from "@copilotkit/react-core";
+import { useCopilotContext } from "@bigppwong/copilotkit-react-core";
 
 export const Window = ({
   children,

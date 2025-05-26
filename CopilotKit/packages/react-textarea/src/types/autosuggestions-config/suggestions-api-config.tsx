@@ -1,4 +1,4 @@
-import { Message, Role, TextMessage } from "@copilotkit/runtime-client-gql";
+import { Message, Role, TextMessage } from "@bigppwong/copilotkit-runtime-client-gql";
 import { MakeSystemPrompt } from "./subtypes/make-system-prompt";
 
 export interface SuggestionsApiConfig {

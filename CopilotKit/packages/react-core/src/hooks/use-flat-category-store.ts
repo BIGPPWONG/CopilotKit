@@ -1,5 +1,5 @@
 import { useCallback, useReducer } from "react";
-import { randomId } from "@copilotkit/shared";
+import { randomId } from "@bigppwong/copilotkit-shared";
 
 export type FlatCategoryStoreId = string;
 

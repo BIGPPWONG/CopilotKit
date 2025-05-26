@@ -4,7 +4,7 @@
  * ## Example
  *
  * ```ts
- * import { CopilotRuntime, AnthropicAdapter } from "@copilotkit/runtime";
+ * import { CopilotRuntime, AnthropicAdapter } from "@bigppwong/copilotkit-runtime";
  * import Anthropic from "@anthropic-ai/sdk";
  *
  * const copilotKit = new CopilotRuntime();
@@ -28,7 +28,7 @@ import {
   limitMessagesToTokenCount,
 } from "./utils";
 
-import { randomId, randomUUID } from "@copilotkit/shared";
+import { randomId, randomUUID } from "@bigppwong/copilotkit-shared";
 
 const DEFAULT_MODEL = "claude-3-5-sonnet-latest";
 

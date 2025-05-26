@@ -5,7 +5,7 @@ import {
   RuntimeEventTypes,
   RuntimeMetaEventName,
 } from "../../service-adapters/events";
-import { randomId } from "@copilotkit/shared";
+import { randomId } from "@bigppwong/copilotkit-shared";
 
 interface LangGraphEventWithState {
   event: LangGraphEvent | null;

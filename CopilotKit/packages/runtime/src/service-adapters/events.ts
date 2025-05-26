@@ -1,4 +1,4 @@
-import { Action, randomId } from "@copilotkit/shared";
+import { Action, randomId } from "@bigppwong/copilotkit-shared";
 import {
   of,
   concat,

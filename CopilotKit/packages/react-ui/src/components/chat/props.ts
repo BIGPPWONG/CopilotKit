@@ -1,4 +1,4 @@
-import { Message } from "@copilotkit/runtime-client-gql";
+import { Message } from "@bigppwong/copilotkit-runtime-client-gql";
 import { CopilotChatSuggestion } from "../../types/suggestions";
 import { ReactNode } from "react";
 

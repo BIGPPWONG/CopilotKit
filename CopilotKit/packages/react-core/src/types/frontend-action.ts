@@ -1,10 +1,10 @@
-import { ActionInputAvailability } from "@copilotkit/runtime-client-gql";
+import { ActionInputAvailability } from "@bigppwong/copilotkit-runtime-client-gql";
 import {
   Action,
   Parameter,
   MappedParameterTypes,
   actionParametersToJsonSchema,
-} from "@copilotkit/shared";
+} from "@bigppwong/copilotkit-shared";
 import React from "react";
 
 interface InProgressState<T extends Parameter[] | [] = []> {

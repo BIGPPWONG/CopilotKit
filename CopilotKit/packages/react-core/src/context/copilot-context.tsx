@@ -1,4 +1,4 @@
-import { CopilotCloudConfig, FunctionCallHandler } from "@copilotkit/shared";
+import { CopilotCloudConfig, FunctionCallHandler } from "@bigppwong/copilotkit-shared";
 import {
   ActionRenderProps,
   CatchAllActionRenderProps,
@@ -14,8 +14,8 @@ import {
   CopilotRuntimeClient,
   ExtensionsInput,
   ForwardedParametersInput,
-} from "@copilotkit/runtime-client-gql";
-import { Agent } from "@copilotkit/runtime-client-gql";
+} from "@bigppwong/copilotkit-runtime-client-gql";
+import { Agent } from "@bigppwong/copilotkit-runtime-client-gql";
 import {
   LangGraphInterruptAction,
   LangGraphInterruptActionSetter,

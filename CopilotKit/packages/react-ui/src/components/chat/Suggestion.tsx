@@ -3,11 +3,11 @@ import {
   extract,
   CopilotChatSuggestionConfiguration,
   CopilotMessagesContextParams,
-} from "@copilotkit/react-core";
+} from "@bigppwong/copilotkit-react-core";
 import { SmallSpinnerIcon } from "./Icons";
 import { CopilotChatSuggestion } from "../../types/suggestions";
-import { actionParametersToJsonSchema } from "@copilotkit/shared";
-import { CopilotRequestType } from "@copilotkit/runtime-client-gql";
+import { actionParametersToJsonSchema } from "@bigppwong/copilotkit-shared";
+import { CopilotRequestType } from "@bigppwong/copilotkit-runtime-client-gql";
 
 interface SuggestionsProps {
   title: string;

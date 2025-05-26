@@ -47,22 +47,22 @@ importers:
 
   examples/next-openai:
     dependencies:
-      '@copilotkit/react-core':
+      '@bigppwong/copilotkit-react-core':
         specifier: workspace:*
         version: link:../../packages/react-core
-      '@copilotkit/react-textarea':
+      '@bigppwong/copilotkit-react-textarea':
         specifier: workspace:*
         version: link:../../packages/react-textarea
-      '@copilotkit/react-ui':
+      '@bigppwong/copilotkit-react-ui':
         specifier: workspace:*
         version: link:../../packages/react-ui
-      '@copilotkit/runtime':
+      '@bigppwong/copilotkit-runtime':
         specifier: workspace:*
         version: link:../../packages/runtime
-      '@copilotkit/runtime-client-gql':
+      '@bigppwong/copilotkit-runtime-client-gql':
         specifier: workspace:*
         version: link:../../packages/runtime-client-gql
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../../packages/shared
       '@google/generative-ai':
@@ -100,7 +100,7 @@ importers:
         version: 0.5.0(encoding@0.1.13)
       langchain:
         specifier: ^0.3.3
-        version: 0.3.3(@langchain/anthropic@0.3.5(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(@langchain/google-genai@0.1.0(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(zod@3.23.8))(axios@1.7.9(debug@4.4.0))(encoding@0.1.13)(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8))(ws@8.18.1)
+        version: 0.3.3(@langchain/anthropic@0.3.5(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(@langchain/google-genai@0.1.0(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(zod@3.23.8))(axios@1.7.9)(encoding@0.1.13)(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8))(ws@8.18.1)
       next:
         specifier: ^15.0.2
         version: 15.0.2(@playwright/test@1.50.1)(react-dom@19.0.0-rc-0bc30748-20241028(react@19.0.0-rc-0bc30748-20241028))(react@19.0.0-rc-0bc30748-20241028)
@@ -156,19 +156,19 @@ importers:
 
   examples/next-pages-router:
     dependencies:
-      '@copilotkit/react-core':
+      '@bigppwong/copilotkit-react-core':
         specifier: workspace:*
         version: link:../../packages/react-core
-      '@copilotkit/react-textarea':
+      '@bigppwong/copilotkit-react-textarea':
         specifier: workspace:*
         version: link:../../packages/react-textarea
-      '@copilotkit/react-ui':
+      '@bigppwong/copilotkit-react-ui':
         specifier: workspace:*
         version: link:../../packages/react-ui
-      '@copilotkit/runtime':
+      '@bigppwong/copilotkit-runtime':
         specifier: workspace:*
         version: link:../../packages/runtime
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../../packages/shared
       '@google/generative-ai':
@@ -247,10 +247,10 @@ importers:
 
   examples/node-express:
     dependencies:
-      '@copilotkit/runtime':
+      '@bigppwong/copilotkit-runtime':
         specifier: workspace:*
         version: link:../../packages/runtime
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../../packages/shared
       dotenv:
@@ -287,10 +287,10 @@ importers:
 
   examples/node-http:
     dependencies:
-      '@copilotkit/runtime':
+      '@bigppwong/copilotkit-runtime':
         specifier: workspace:*
         version: link:../../packages/runtime
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../../packages/shared
       dotenv:
@@ -321,10 +321,10 @@ importers:
 
   packages/react-core:
     dependencies:
-      '@copilotkit/runtime-client-gql':
+      '@bigppwong/copilotkit-runtime-client-gql':
         specifier: workspace:*
         version: link:../runtime-client-gql
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../shared
       '@scarf/scarf':
@@ -376,13 +376,13 @@ importers:
 
   packages/react-textarea:
     dependencies:
-      '@copilotkit/react-core':
+      '@bigppwong/copilotkit-react-core':
         specifier: workspace:*
         version: link:../react-core
-      '@copilotkit/runtime-client-gql':
+      '@bigppwong/copilotkit-runtime-client-gql':
         specifier: workspace:*
         version: link:../runtime-client-gql
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../shared
       '@emotion/css':
@@ -497,13 +497,13 @@ importers:
 
   packages/react-ui:
     dependencies:
-      '@copilotkit/react-core':
+      '@bigppwong/copilotkit-react-core':
         specifier: workspace:*
         version: link:../react-core
-      '@copilotkit/runtime-client-gql':
+      '@bigppwong/copilotkit-runtime-client-gql':
         specifier: workspace:*
         version: link:../runtime-client-gql
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../shared
       '@headlessui/react':
@@ -585,7 +585,7 @@ importers:
       '@anthropic-ai/sdk':
         specifier: ^0.27.3
         version: 0.27.3(encoding@0.1.13)
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../shared
       '@graphql-yoga/plugin-defer-stream':
@@ -706,7 +706,7 @@ importers:
 
   packages/runtime-client-gql:
     dependencies:
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../shared
       '@urql/core':
@@ -722,7 +722,7 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(@urql/core@5.0.4(graphql@16.9.0))(react@18.3.1)
     devDependencies:
-      '@copilotkit/runtime':
+      '@bigppwong/copilotkit-runtime':
         specifier: workspace:*
         version: link:../runtime
       '@graphql-codegen/cli':
@@ -782,7 +782,7 @@ importers:
 
   packages/sdk-js:
     dependencies:
-      '@copilotkit/shared':
+      '@bigppwong/copilotkit-shared':
         specifier: workspace:*
         version: link:../shared
       '@langchain/community':
@@ -13431,7 +13431,7 @@ snapshots:
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.33.2(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -13483,7 +13483,7 @@ snapshots:
       enhanced-resolve: 5.17.1
       eslint: 8.57.0
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
       is-core-module: 2.15.0
@@ -13544,7 +13544,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -15470,7 +15470,7 @@ snapshots:
       - openai
       - ws
 
-  langchain@0.3.3(@langchain/anthropic@0.3.5(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(@langchain/google-genai@0.1.0(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(zod@3.23.8))(axios@1.7.9(debug@4.4.0))(encoding@0.1.13)(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8))(ws@8.18.1):
+  langchain@0.3.3(@langchain/anthropic@0.3.5(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(encoding@0.1.13))(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(@langchain/google-genai@0.1.0(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(zod@3.23.8))(axios@1.7.9)(encoding@0.1.13)(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8))(ws@8.18.1):
     dependencies:
       '@langchain/core': 0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8))
       '@langchain/openai': 0.3.11(@langchain/core@0.3.38(openai@4.85.2(encoding@0.1.13)(ws@8.18.1)(zod@3.23.8)))(encoding@0.1.13)(ws@8.18.1)

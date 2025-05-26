@@ -4,7 +4,7 @@
 
 import { ReactNode, useEffect, useState, useRef } from "react";
 import { CopilotMessagesContext } from "../../context/copilot-messages-context";
-import { loadMessagesFromJsonRepresentation, Message } from "@copilotkit/runtime-client-gql";
+import { loadMessagesFromJsonRepresentation, Message } from "@bigppwong/copilotkit-runtime-client-gql";
 import { useCopilotContext } from "../../context/copilot-context";
 
 export function CopilotMessages({ children }: { children: ReactNode }) {

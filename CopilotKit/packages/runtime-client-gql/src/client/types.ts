@@ -1,4 +1,4 @@
-import { randomId } from "@copilotkit/shared";
+import { randomId } from "@bigppwong/copilotkit-shared";
 import {
   ActionExecutionMessageInput,
   MessageRole,
@@ -13,7 +13,7 @@ import {
   CopilotKitLangGraphInterruptEvent as GqlCopilotKitLangGraphInterruptEvent,
   ImageMessageInput,
 } from "../graphql/@generated/graphql";
-import { parseJson } from "@copilotkit/shared";
+import { parseJson } from "@bigppwong/copilotkit-shared";
 
 type MessageType =
   | "TextMessage"

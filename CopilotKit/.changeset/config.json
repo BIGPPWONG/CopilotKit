@@ -4,8 +4,14 @@
   "commit": false,
   "access": "public",
   "baseBranch": "origin/main",
-  "fixed": [["@copilotkit/*"]],
-  "ignore": ["*"],
+  "fixed": [
+    [
+      "@bigppwong/copilotkit-*"
+    ]
+  ],
+  "ignore": [
+    "*"
+  ],
   "linked": [],
   "updateInternalDependencies": "patch"
 }

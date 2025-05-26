@@ -1,5 +1,27 @@
 # @copilotkit/runtime-client-gql
 
+## 2.0.0-next.2
+
+### Major Changes
+
+- fork copilotkit
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.2
+
+## 2.0.0-next.1
+
+### Major Changes
+
+- fork Copilotkit
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.1
+
 ## 1.8.14-next.0
 
 ### Patch Changes

@@ -1,5 +1,7 @@
 {
-  "private": false,
+  "name": "bigppwong-copilotkit",
+  "version": "2.0.0-next.2",
+  "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev --concurrency 14",
@@ -40,6 +42,5 @@
     "javascript",
     "automation",
     "textarea"
-  ],
-  "name": "CopilotKit"
+  ]
 }

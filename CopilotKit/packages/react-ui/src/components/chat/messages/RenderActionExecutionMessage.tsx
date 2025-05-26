@@ -1,6 +1,6 @@
-import { MessageStatusCode } from "@copilotkit/runtime-client-gql";
+import { MessageStatusCode } from "@bigppwong/copilotkit-runtime-client-gql";
 import { RenderMessageProps } from "../props";
-import { RenderFunctionStatus, useCopilotContext } from "@copilotkit/react-core";
+import { RenderFunctionStatus, useCopilotContext } from "@bigppwong/copilotkit-react-core";
 import { AssistantMessage as DefaultAssistantMessage } from "./AssistantMessage";
 
 export function RenderActionExecutionMessage({

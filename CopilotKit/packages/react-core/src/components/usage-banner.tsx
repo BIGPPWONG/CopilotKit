@@ -1,4 +1,4 @@
-import { Severity, CopilotKitError, ERROR_NAMES } from "@copilotkit/shared";
+import { Severity, CopilotKitError, ERROR_NAMES } from "@bigppwong/copilotkit-shared";
 
 interface UsageBannerProps {
   severity?: Severity;
