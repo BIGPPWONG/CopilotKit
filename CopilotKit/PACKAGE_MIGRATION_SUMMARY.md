@@ -97,4 +97,5 @@ pnpm run build
 发布流程 
 1. pnpm changeset生成changeset文件
 2. pnpm changeset version 自动更新版本
-3. pnpm -r publish --dry-run --no-git-checks --filter="./packages/*"
+3. pnpm run build 编译所有包，更新 dist 目录
+4. pnpm -r publish --dry-run --no-git-checks --filter="./packages/*"

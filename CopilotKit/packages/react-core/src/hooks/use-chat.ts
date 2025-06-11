@@ -329,29 +329,29 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
             messages: convertMessagesToGqlInput(filterAgentStateMessages(messagesWithContext)),
             ...(copilotConfig.cloud
               ? {
-                  cloud: {
-                    ...(copilotConfig.cloud.guardrails?.input?.restrictToTopic?.enabled
-                      ? {
-                          guardrails: {
-                            inputValidationRules: {
-                              allowList:
-                                copilotConfig.cloud.guardrails.input.restrictToTopic.validTopics,
-                              denyList:
-                                copilotConfig.cloud.guardrails.input.restrictToTopic.invalidTopics,
-                            },
-                          },
-                        }
-                      : {}),
-                  },
-                }
+                cloud: {
+                  ...(copilotConfig.cloud.guardrails?.input?.restrictToTopic?.enabled
+                    ? {
+                      guardrails: {
+                        inputValidationRules: {
+                          allowList:
+                            copilotConfig.cloud.guardrails.input.restrictToTopic.validTopics,
+                          denyList:
+                            copilotConfig.cloud.guardrails.input.restrictToTopic.invalidTopics,
+                        },
+                      },
+                    }
+                    : {}),
+                },
+              }
               : {}),
             metadata: {
               requestType: CopilotRequestType.Chat,
             },
             ...(agentSessionRef.current
               ? {
-                  agentSession: agentSessionRef.current,
-                }
+                agentSession: agentSessionRef.current,
+              }
               : {}),
             agentStates: Object.values(coagentStatesRef.current!).map((state) => {
               const stateObject: AgentStateInput = {
@@ -589,6 +589,7 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
             ) => {
               const isInterruptAction = interruptMessages.find((m) => m.id === message.id);
               followUp = action?.followUp ?? !isInterruptAction;
+              console.log("action followUp", followUp);
               const resultMessage = await executeAction({
                 onFunctionCall,
                 previousMessages,
@@ -622,6 +623,13 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
                 });
                 await executeActionFromMessage(pairedFeAction, newExecutionMessage);
               }
+            } else if (message.isActionExecutionMessage() && !action) {
+              // Handle server-side actions without frontend action definitions (e.g., MCP tools)
+              // For these actions, we default followUp to true unless it's an interrupt action
+              const isInterruptAction = interruptMessages.find((m) => m.id === message.id);
+              followUp = !isInterruptAction; // Default to true for non-interrupt server-side actions
+              console.log("server-side action followUp (MCP/remote)", followUp);
+              didExecuteAction = true; // Mark that we processed an action
             } else if (message.isResultMessage() && currentResultMessagePairedFeAction) {
               // Actions which are set up in runtime actions array: Grab the result, executed paired FE action with it as args.
               const newExecutionMessage = new ActionExecutionMessage({
@@ -894,9 +902,9 @@ async function executeAction({
     result: ResultMessage.encodeResult(
       error
         ? {
-            content: result,
-            error: JSON.parse(JSON.stringify(error, Object.getOwnPropertyNames(error))),
-          }
+          content: result,
+          error: JSON.parse(JSON.stringify(error, Object.getOwnPropertyNames(error))),
+        }
         : result,
     ),
     actionExecutionId: message.id,

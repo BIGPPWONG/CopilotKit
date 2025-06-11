@@ -1,5 +1,41 @@
 # @copilotkit/shared
 
+## 2.0.0-next.8
+
+### Major Changes
+
+- fix mcp tool
+
+## 2.0.0-next.7
+
+### Major Changes
+
+- fix mcp error
+
+## 2.0.0-next.6
+
+### Major Changes
+
+- add followup log
+
+## 2.0.0-next.5
+
+### Major Changes
+
+- fix
+
+## 2.0.0-next.4
+
+### Major Changes
+
+- add error msg for mcp tools
+
+## 2.0.0-next.3
+
+### Major Changes
+
+- add error msg for mcp tools
+
 ## 2.0.0-next.2
 
 ### Major Changes

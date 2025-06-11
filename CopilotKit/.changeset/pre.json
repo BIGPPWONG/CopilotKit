@@ -18,7 +18,13 @@
     "tsconfig": "1.4.6"
   },
   "changesets": [
+    "cuddly-bulldogs-ring",
+    "fluffy-ears-peel",
     "late-bananas-chew",
-    "tidy-hairs-divide"
+    "neat-beds-eat",
+    "real-cycles-greet",
+    "spotty-foxes-smile",
+    "tidy-hairs-divide",
+    "tricky-birds-smoke"
   ]
 }

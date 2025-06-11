@@ -1,5 +1,71 @@
 # @copilotkit/runtime
 
+## 2.0.0-next.8
+
+### Major Changes
+
+- fix mcp tool
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.8
+
+## 2.0.0-next.7
+
+### Major Changes
+
+- fix mcp error
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.7
+
+## 2.0.0-next.6
+
+### Major Changes
+
+- add followup log
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.6
+
+## 2.0.0-next.5
+
+### Major Changes
+
+- fix
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.5
+
+## 2.0.0-next.4
+
+### Major Changes
+
+- add error msg for mcp tools
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.4
+
+## 2.0.0-next.3
+
+### Major Changes
+
+- add error msg for mcp tools
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.3
+
 ## 2.0.0-next.2
 
 ### Major Changes
