@@ -1,8 +1,8 @@
-import { Message } from "@bigppwong/copilotkit-runtime-client-gql";
+import { Message, TextMessage } from "@bigppwong/copilotkit-runtime-client-gql";
 import { CopilotChatSuggestion } from "../../types/suggestions";
 import { ReactNode } from "react";
 
-export interface ButtonProps {}
+export interface ButtonProps { }
 
 export interface WindowProps {
   clickOutsideToClose: boolean;
@@ -11,7 +11,7 @@ export interface WindowProps {
   children?: React.ReactNode;
 }
 
-export interface HeaderProps {}
+export interface HeaderProps { }
 
 export interface SuggestionsProps {
   title: string;
@@ -50,12 +50,12 @@ export interface MessagesProps {
   /**
    * Callback function for thumbs up feedback
    */
-  onThumbsUp?: (message: string) => void;
+  onThumbsUp?: (message: TextMessage) => void;
 
   /**
    * Callback function for thumbs down feedback
    */
-  onThumbsDown?: (message: string) => void;
+  onThumbsDown?: (message: TextMessage) => void;
 
   /**
    * A list of markdown components to render in assistant message.
@@ -121,12 +121,12 @@ export interface AssistantMessageProps {
   /**
    * Callback function for thumbs up feedback
    */
-  onThumbsUp?: (message: string) => void;
+  onThumbsUp?: (message: TextMessage) => void;
 
   /**
    * Callback function for thumbs down feedback
    */
-  onThumbsDown?: (message: string) => void;
+  onThumbsDown?: (message: TextMessage) => void;
 
   /**
    * A list of markdown components to render in assistant message.
@@ -157,12 +157,12 @@ export interface RenderMessageProps {
   /**
    * Callback function for thumbs up feedback
    */
-  onThumbsUp?: (message: string) => void;
+  onThumbsUp?: (message: TextMessage) => void;
 
   /**
    * Callback function for thumbs down feedback
    */
-  onThumbsDown?: (message: string) => void;
+  onThumbsDown?: (message: TextMessage) => void;
 
   /**
    * A list of markdown components to render in assistant message.
