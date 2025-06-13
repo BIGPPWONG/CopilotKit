@@ -1,4 +1,4 @@
-import { MCPTool, MCPClient as MCPClientInterface } from "@copilotkit/runtime";
+import { MCPTool, MCPClient as MCPClientInterface } from "@bigppwong/copilotkit-runtime";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { SSEClientTransport } from "@modelcontextprotocol/sdk/client/sse.js";
 import type { JSONRPCMessage } from "@modelcontextprotocol/sdk/types.js";
@@ -109,6 +109,31 @@ export class MCPClient implements MCPClientInterface {
   }
 
   /**
+   * 转换 MCP 服务器返回的标准 JSON Schema 为 MCPTool 期望的格式
+   * @param inputSchema MCP 服务器返回的标准 JSON Schema
+   * @returns 转换后的 MCPTool schema 格式
+   */
+  private convertInputSchemaToMCPToolSchema(inputSchema: any): any {
+    if (!inputSchema) {
+      return {};
+    }
+
+    // 如果已经是 MCPTool 格式，直接返回
+    if (inputSchema.parameters) {
+      return inputSchema;
+    }
+
+    // 转换标准 JSON Schema 为 MCPTool 格式
+    return {
+      parameters: {
+        properties: inputSchema.properties || {},
+        required: inputSchema.required || [],
+        jsonSchema: inputSchema
+      }
+    };
+  }
+
+  /**
    * Returns a map of tool names to MCPTool objects
    * This method matches the expected CopilotKit interface
    */
@@ -165,9 +190,12 @@ export class MCPClient implements MCPClientInterface {
                 enhancedDescription += `\nExample usage: ${exampleInput}`;
               }
 
+              // 转换 schema 格式
+              const convertedSchema = this.convertInputSchemaToMCPToolSchema(tool.inputSchema);
+
               toolsMap[tool.name] = {
                 description: enhancedDescription,
-                schema: tool.inputSchema || {},
+                schema: convertedSchema,
                 execute: async (args: Record<string, unknown>) => {
                   return this.callTool(tool.name, args);
                 },
@@ -210,9 +238,12 @@ export class MCPClient implements MCPClientInterface {
                 enhancedDescription += `\nExample usage: ${exampleInput}`;
               }
 
+              // 转换 schema 格式
+              const convertedSchema = this.convertInputSchemaToMCPToolSchema(tool.inputSchema);
+
               toolsMap[tool.name] = {
                 description: enhancedDescription,
-                schema: tool.inputSchema || {},
+                schema: convertedSchema,
                 execute: async (args: Record<string, unknown>) => {
                   return this.callTool(tool.name, args);
                 },
@@ -224,6 +255,10 @@ export class MCPClient implements MCPClientInterface {
 
       // Cache the result
       this.toolsCache = toolsMap;
+      // log all inputSchema - 现在打印转换后的格式
+      Object.keys(toolsMap).forEach((toolName) => {
+        console.log("tool converted schema", toolsMap[toolName].schema);
+      });
 
       return toolsMap;
     } catch (error) {
@@ -315,6 +350,8 @@ export class MCPClient implements MCPClientInterface {
       const paramsObj = args.params as Record<string, unknown>;
       if ("params" in paramsObj) {
         console.log("Detected double-nested params, fixing structure");
+        return paramsObj.params as Record<string, unknown>;
+      } else {
         return paramsObj;
       }
     }
@@ -337,7 +374,7 @@ export class MCPClient implements MCPClientInterface {
         try {
           const parsedValue = JSON.parse(value);
           result[key] = parsedValue;
-        } catch (e) {
+        } catch {
           // Not valid JSON, keep as string
           result[key] = value;
         }

@@ -1,5 +1,4 @@
 import { Action, Parameter } from "@bigppwong/copilotkit-shared";
-import { ResultMessage } from "../../graphql/types/converted";
 
 /**
  * Represents a tool provided by an MCP server.
@@ -105,20 +104,11 @@ export function convertMCPToolsToActions(
           `Error executing MCP tool '${toolName}' from endpoint ${mcpEndpoint}:`,
           error,
         );
-
-        // Format error in CopilotKit standard format for proper LLM handling
-        const errorMessage = error instanceof Error ? error.message : String(error);
-        const errorCode = (error as any)?.code || "MCP_EXECUTION_ERROR";
-
-        // Use the standard ResultMessage.encodeResult to ensure consistency with CopilotKit
-        const errorObj = {
-          code: String(errorCode),
-          message: `MCP tool '${toolName}' execution failed: ${errorMessage}`
-        };
-
-        const standardErrorResponse = ResultMessage.encodeResult("", errorObj);
-        console.log("returning standardized error", standardErrorResponse);
-        return standardErrorResponse;
+        // Re-throw or format the error for the LLM
+        throw new Error(
+          `Execution failed for MCP tool '${toolName}': ${error instanceof Error ? error.message : String(error)
+          }`,
+        );
       }
     };
 

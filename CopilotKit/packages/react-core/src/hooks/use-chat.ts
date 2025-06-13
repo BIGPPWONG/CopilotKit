@@ -383,6 +383,7 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
       let messages: Message[] = [];
       let syncedMessages: Message[] = [];
       let interruptMessages: Message[] = [];
+      let gqlLastMessage: Message | null = null;
 
       try {
         while (true) {
@@ -448,6 +449,7 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
           messages = convertGqlOutputToMessages(
             filterAdjacentAgentStateMessages(rawMessagesResponse),
           );
+          gqlLastMessage = messages[messages.length - 1];
 
           if (messages.length === 0) {
             continue;
@@ -623,12 +625,19 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
                 });
                 await executeActionFromMessage(pairedFeAction, newExecutionMessage);
               }
-            } else if (message.isActionExecutionMessage() && !action) {
+            } else if (message.isActionExecutionMessage() && !action && gqlLastMessage && gqlLastMessage.isResultMessage()) {
+              // MCP tools是在Runtime中动态获取的，actions不包含MCP tools
+              // 只要流里带有 最新的 AgentStateMessage，并且其中 state.messages 不为空，前端就把 该状态里的消息 当成"真相"，完全覆盖刚刚拿到的 newMessages。
+              // 而 LangGraph 端 state.messages 默认只包含 普通文本、ActionExecutionMessage，并不会把 ResultMessage 写进去（远端工具结果通常只回给调用者，不回灌到线程）。于是当覆盖发生时，MCP 返回的 ResultMessage 就被抛掉了。
+              // 所以这里需要把 MCP 的 ResultMessage 添加到 finalMessages 中
+              if (gqlLastMessage) {
+                finalMessages.push(gqlLastMessage);
+              }
               // Handle server-side actions without frontend action definitions (e.g., MCP tools)
               // For these actions, we default followUp to true unless it's an interrupt action
               const isInterruptAction = interruptMessages.find((m) => m.id === message.id);
               followUp = !isInterruptAction; // Default to true for non-interrupt server-side actions
-              console.log("server-side action followUp (MCP/remote)", followUp);
+              // console.log("server-side action followUp (MCP/remote)", followUp);
               didExecuteAction = true; // Mark that we processed an action
             } else if (message.isResultMessage() && currentResultMessagePairedFeAction) {
               // Actions which are set up in runtime actions array: Grab the result, executed paired FE action with it as args.

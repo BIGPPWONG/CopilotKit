@@ -1,5 +1,53 @@
 # @copilotkit/shared
 
+## 2.0.0-next.16
+
+### Major Changes
+
+- test
+
+## 2.0.0-next.15
+
+### Major Changes
+
+- test
+
+## 2.0.0-next.14
+
+### Major Changes
+
+- test
+
+## 2.0.0-next.13
+
+### Major Changes
+
+- test
+
+## 2.0.0-next.12
+
+### Major Changes
+
+- test
+
+## 2.0.0-next.11
+
+### Major Changes
+
+- test
+
+## 2.0.0-next.10
+
+### Major Changes
+
+- add mcp result
+
+## 2.0.0-next.9
+
+### Major Changes
+
+- merge main
+
 ## 2.0.0-next.8
 
 ### Major Changes

@@ -1,5 +1,93 @@
 # @copilotkit/runtime
 
+## 2.0.0-next.16
+
+### Major Changes
+
+- test
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.16
+
+## 2.0.0-next.15
+
+### Major Changes
+
+- test
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.15
+
+## 2.0.0-next.14
+
+### Major Changes
+
+- test
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.14
+
+## 2.0.0-next.13
+
+### Major Changes
+
+- test
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.13
+
+## 2.0.0-next.12
+
+### Major Changes
+
+- test
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.12
+
+## 2.0.0-next.11
+
+### Major Changes
+
+- test
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.11
+
+## 2.0.0-next.10
+
+### Major Changes
+
+- add mcp result
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.10
+
+## 2.0.0-next.9
+
+### Major Changes
+
+- merge main
+
+### Patch Changes
+
+- Updated dependencies
+  - @bigppwong/copilotkit-shared@2.0.0-next.9
+
 ## 2.0.0-next.8
 
 ### Major Changes
