@@ -652,6 +652,10 @@ export function useChat(options: UseChatOptions): UseChatHelpers {
                 currentResultMessagePairedFeAction,
                 newExecutionMessage,
               );
+            } else if (message.isResultMessage()) {
+              // 如果当前消息是 ResultMessage，则不执行 followUp
+              followUp = false;
+              didExecuteAction = false;
             }
           }
 
